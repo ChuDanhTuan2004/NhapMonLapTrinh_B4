@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body style="height: 100vh; background-color: rgba(233, 70, 206, 0.494);">
+    <h1 id="loveQuestion">Do you love me?</h1>
+<div style="text-align: center; width: 50%; margin: 0 auto;">
+    
+    <input type="button" id="btnYes" value="yes" onclick="yesClick()" />
+    <input type="button" id="btnNo" value="no" onmouseover="noHover()" style="position: fixed;" />
+    
+</div>
+    <script>
+        function yesClick() {
+            alert("Love you too!");
+        }
+        function noHover() {
+            
+            var x = Math.floor(Math.random() * window.innerWidth);
+            var y = Math.floor(Math.random() * window.innerHeight);
+            document.getElementById("btnNo").style.left = x + "px";
+            document.getElementById("btnNo").style.top = y + "px";
+        }
+    </script>
+    <style>
+        h1{text-align: center;}
+        input{text-align: center;}
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    let diem1= parseInt(prompt('Nhập điểm bài kiểm tra'))
+    let diem2= parseInt(prompt('Nhập điểm thi giữa kì'))
+    let diem3= parseInt(prompt('Nhập điểm thi cuối kì'))
+    let DTB= (diem1+diem2*2+diem3*3)/6
+
+    if(DTB>9){alert('Học sinh xuất sắc')}
+    else if (DTB>8){alert('Học sinh giỏi')}
+    else if (DTB>6){alert('Học sinh tiên tiến')}
+    else if (DTB>3){alert('Học sinh trung bình')}
+    else {alert('Học sinh kém')}
+  </script>
+</body>
+
+</html>

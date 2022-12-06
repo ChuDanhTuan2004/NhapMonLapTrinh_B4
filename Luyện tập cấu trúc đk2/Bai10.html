@@ -1,0 +1,42 @@
+<html>
+
+<body>
+    <script>
+        let ChiSoCu = Number(prompt('Chỉ số cũ'));//Chỉ số cũ được nhập vào từ bàn phím
+        let ChiSoMoi = Number(prompt('Chỉ số mới'));//Chỉ số mới được nhập vào từ bàn phím
+        let DinhMuc = 50;//Định mức sử dụng điện cho mỗi hộ là: 50 KW
+        let DonGiaDinhMuc = 230;//Định mức sử dụng điện cho mỗi hộ là: 50 KW với giá 230đ/KW
+        let TienThueBaoDienKe = 1000;//Tiền thuê bao điện kế: 1000đ/tháng
+        let LuongDienSuDung = ChiSoMoi - ChiSoCu;
+        let PhanDinhMuc = Number;
+        let PhanVuotDinhMuc = Number;
+        if (LuongDienSuDung > DinhMuc) {
+            PhanDinhMuc = DinhMuc;
+            PhanVuotDinhMuc = LuongDienSuDung - DinhMuc;//Nếu dùng quá định mức
+            //thì phần vượt định mức bằng lượng điện sử dụng trừ đi định mức
+        }
+        else {
+            PhanVuotDinhMuc = 0;//Nếu dùng không quá định mức thì phần vượt định mức = 0
+            PhanDinhMuc = LuongDienSuDung;
+        }
+        let DonGiaVuotDinhMuc = Number;
+        if (PhanVuotDinhMuc <= 50) { DonGiaVuotDinhMuc = 480; }    //Nếu phần vượt định mức <= 50KW thì tính giá 480đ/KW
+        else if (PhanVuotDinhMuc < 100) { DonGiaVuotDinhMuc = 700; }//Nếu 50KW < phần vượt định mức < 100KW thì tính giá 700đ/KW
+        else if (PhanVuotDinhMuc >= 100) { DonGiaVuotDinhMuc = 700; }//Nếu phần vượt định mức <= 100KW thì tính giá 900đ/KW
+        else { '' }
+        let TienTraDinhMuc = PhanDinhMuc * DonGiaDinhMuc;
+        let TienVuotDinhMuc = PhanVuotDinhMuc * DonGiaVuotDinhMuc;
+        let TongTienPhaiTra = TienTraDinhMuc + TienVuotDinhMuc + TienThueBaoDienKe;
+        document.write("Chỉ số cũ: " + ChiSoCu);//In ra màn hình chỉ số cũ
+        document.write('<br>')
+        document.write("Chỉ số mới: " + ChiSoMoi);//In ra màn hình chỉ số mới
+        document.write('<br>')
+        document.write("Tiền trả định mức: " + TienTraDinhMuc);//In ra màn hình tiền trả định mức
+        document.write('<br>')
+        document.write("Tiền trả vượt định mức: " + TienVuotDinhMuc);//In ra màn hình tiền trả vượt định mức
+        document.write('<br>')
+        document.write("Tổng tiền phải trả: " + TongTienPhaiTra);
+    </script>
+</body>
+
+</html>

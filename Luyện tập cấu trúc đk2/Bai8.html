@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <form action="">
+            Nhập số tuổi kiểm tra: <input type="text" name="" id="a">
+            <br>
+            <input type="button" id="kiemtra" value="Kiểm tra"/>
+            <p id="message"></p>
+        </form>
+        <script>
+            var button = document.getElementById('kiemtra');
+            kiemtra.onclick = function(){
+            let a = document.getElementById('a').value;
+
+            if(a>0 && a<120){
+                document.getElementById("message").innerHTML = 'Độ tuổi của một người';
+            } else {document.getElementById("message").innerHTML = 'Không phải độ tuổi của một người';}
+            }
+        </script>
+    </body>
+</html>

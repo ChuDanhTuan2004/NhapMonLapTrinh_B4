@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <table>
+        <tr>
+            <td> <input type="number" name="" id="so1"></td>
+            <td> <input type="number" name="" id="so2"></td>
+            <td> <input type="submit" name="" id="cong" onclick="coco()" value="Cộng"></td>
+            <td> <input type="submit" name="" id="tru" onclick="trtr()" value="Trừ"></td>
+        </tr>
+        <tr>
+            <td>Result: </td>
+            
+        </tr>
+        <tr id="message"></tr>
+       
+    </table>
+
+    <script>
+        function coco() {
+            let a = Number(document.getElementById('so1').value)
+            let b = Number(document.getElementById('so2').value)
+            var Result= a+b;
+            document.getElementById("message").innerHTML =Result;
+        }
+
+        function trtr() {
+            let a = Number(document.getElementById('so1'))
+            let b = Number(document.getElementById('so2'))
+            var Result= a-b;
+            document.getElementById("message").innerHTML =Result;
+        }
+    </script>
+</body>
+
+</html>
